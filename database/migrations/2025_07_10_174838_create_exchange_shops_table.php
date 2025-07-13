@@ -26,7 +26,7 @@ return new class extends Migration
             $table->string('phone')->nullable();
             $table->boolean('crypto_supported')->default(false);
             $table->boolean('is_featured')->default(false);
-            $table->float('rating')->nullable();
+            $table->float('rating')->default(0);
 
             $table->timestamps();
         });

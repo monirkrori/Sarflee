@@ -3,8 +3,8 @@
 namespace App\Http\Controllers\Api\V1;
 
 use App\Http\Controllers\Controller;
-use App\Http\Requests\V1\Exchange\UpdateExchangeShopRequest;
 use App\Http\Resources\V1\ExchangeShopResource;
+use App\Models\ExchangeShop;
 use App\Services\V1\ExchangeShopService;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Support\Facades\Auth;
@@ -42,7 +42,7 @@ class ExchangeShopController extends Controller
         ]);
     }
 
-    public function update(UpdateExchangeShopRequest $request): JsonResponse
+    public function update(ExchangeShop $request): JsonResponse
     {
         $shop = Auth::user()->exchangeShop;
 

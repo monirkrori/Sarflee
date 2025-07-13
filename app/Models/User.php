@@ -57,4 +57,8 @@ class User extends Authenticatable
     {
         return $this->hasOne(\App\Models\ExchangeShop::class);
     }
-}
+
+    public function ratings()
+    {
+        return $this->hasMany(Rating::class);
+    }}
